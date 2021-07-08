@@ -1,0 +1,4 @@
+/node_modules/
+
+# Mac files that don't need to be on Git
+.DS_Store
