@@ -32,13 +32,11 @@
                         <v-list-item to="/music">
                             <v-list-item-title><v-icon>headphones</v-icon> Music</v-list-item-title>
                         </v-list-item>
-                        
-                        <v-list-item href="#">
+
+                        <v-list-item to="/store">
                             <v-list-item-title><v-icon>storefront</v-icon> Store</v-list-item-title>
                         </v-list-item>
-                        <v-list-item href="#">
-                            <v-list-item-title><v-icon>email</v-icon> Message Board</v-list-item-title>
-                        </v-list-item>
+
                     </v-list>
                 </div>
             </v-menu>

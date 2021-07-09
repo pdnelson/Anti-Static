@@ -8,6 +8,7 @@ import App from "./App.vue";
 import Index from "./modules/index/Index";
 import Projects from "./modules/projects/Projects";
 import Music from "./modules/music/Music";
+import Shop from "./modules/shop/Shop";
 
 Vue.config.productionTip = false;
 
@@ -26,6 +27,11 @@ const routes = [
     path: '/music',
     name: 'music',
     component: Music
+  },
+  {
+    path: '/store',
+    name: 'shop',
+    component: Shop
   }
 ]
 
