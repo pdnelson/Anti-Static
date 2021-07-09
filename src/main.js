@@ -11,6 +11,8 @@ import Music from "./modules/music/Music";
 import Shop from "./modules/shop/Shop";
 import CreateAccount from "./modules/accounts/CreateAccount";
 import LogIn from "./modules/accounts/LogIn";
+import AdvancedSearch from "./modules/search/AdvancedSearch";
+import SearchResults from "./modules/search/SearchResults";
 
 Vue.config.productionTip = false;
 
@@ -44,6 +46,16 @@ const routes = [
     path: '/login',
     name: 'login',
     component: LogIn
+  },
+  {
+    path: '/advanced-search',
+    name: 'advanced-search',
+    component: AdvancedSearch
+  },
+  {
+    path: '/search-results',
+    name: 'search-results',
+    component: SearchResults
   }
 ]
 
@@ -55,12 +67,14 @@ const router = new VueRouter({
 router.beforeEach((to, _, next) => {
 
   // Change the page name in the tab for each router view
-  if      (to.name === 'index')     document.title = "Anti-Static Software";
-  else if (to.name === 'projects')  document.title = "Anti-Static Software - Projects";
-  else if (to.name === 'music')     document.title = "Anti-Static Software - Music";
-  else if (to.name === 'shop')      document.title = "Anti-Static Software - Store";
-  else if (to.name === 'login')     document.title = "Anti-Static Software - Log In";
-  else if (to.name === 'register')  document.title = "Anti-Static Software - Register";
+  if      (to.name === 'index')           document.title = "Anti-Static Software";
+  else if (to.name === 'projects')        document.title = "Anti-Static Software - Projects";
+  else if (to.name === 'music')           document.title = "Anti-Static Software - Music";
+  else if (to.name === 'shop')            document.title = "Anti-Static Software - Store";
+  else if (to.name === 'login')           document.title = "Anti-Static Software - Log In";
+  else if (to.name === 'register')        document.title = "Anti-Static Software - Register";
+  else if (to.name === 'advanced-search') document.title = "Anti-Static Software - Search";
+  else if (to.name === 'search-results') document.title = "Anti-Static Software - Search Results";
 
   next();
 });

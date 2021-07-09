@@ -37,6 +37,10 @@
                             <v-list-item-title><v-icon>storefront</v-icon> Store</v-list-item-title>
                         </v-list-item>
 
+                        <v-list-item to="/advanced-search">
+                            <v-list-item-title><v-icon>search</v-icon> Advanced Search</v-list-item-title>
+                        </v-list-item>
+
                     </v-list>
                 </div>
             </v-menu>
