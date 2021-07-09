@@ -4,7 +4,7 @@
 
     <router-view></router-view>
     
-    <hr/>
+    <hr class="footer"/>
 
     <footer>{{currentYear}} Patrick Nelson</footer>
   </v-app>
@@ -29,6 +29,9 @@ export default {
 </script>
 
 <style>
+.footer {
+  margin-top: 10px;
+}
 footer {
   text-align: center;
 	margin-bottom: 10px;
