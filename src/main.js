@@ -5,8 +5,8 @@ import VueRouter from 'vue-router';
 import App from "./App.vue";
 
 // Views
-import Index from "./views/Index";
-import Projects from "./views/Projects";
+import Index from "./modules/index/Index";
+import Projects from "./modules/projects/Projects";
 
 Vue.config.productionTip = false;
 

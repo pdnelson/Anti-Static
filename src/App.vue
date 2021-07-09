@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import NavigationBar from "./components/NavigationBar";
+import NavigationBar from "./modules/NavigationBar";
 
 export default {
   name: "App",
