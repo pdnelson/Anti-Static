@@ -3,6 +3,8 @@
     <NavigationBar/>
 
     <router-view></router-view>
+
+    <footer>2021 Patrick Nelson</footer>
   </v-app>
 </template>
 

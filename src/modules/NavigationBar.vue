@@ -73,10 +73,10 @@
 
                 <div class="page-nav">
                     <v-list dark>
-                        <v-list-item href="#">
+                        <v-list-item to="/login">
                             <v-list-item-title><v-icon>login</v-icon> Log In</v-list-item-title>
                         </v-list-item>
-                        <v-list-item href="#">
+                        <v-list-item to="/register">
                             <v-list-item-title><v-icon>app_registration</v-icon> Sign Up</v-list-item-title>
                         </v-list-item>
                     </v-list>
