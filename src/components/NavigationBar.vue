@@ -20,12 +20,15 @@
                         dark
                         width="300px" 
                     >
-                        <v-list-item href="#">
+                        
+                        <v-list-item to="/">
                             <v-list-item-title><v-icon>home</v-icon> Home</v-list-item-title>
                         </v-list-item>
-                        <v-list-item href="#">
+
+                        <v-list-item to="/projects">
                             <v-list-item-title><v-icon>content_paste</v-icon> Projects</v-list-item-title>
                         </v-list-item>
+                        
                         <v-list-item href="#">
                             <v-list-item-title><v-icon>headphones</v-icon> Music</v-list-item-title>
                         </v-list-item>

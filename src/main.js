@@ -6,6 +6,7 @@ import App from "./App.vue";
 
 // Views
 import Index from "./views/Index";
+import Projects from "./views/Projects";
 
 Vue.config.productionTip = false;
 
@@ -14,10 +15,18 @@ const routes = [
     path: '/',
     name: 'index',
     component: Index
+  },
+  {
+    path: '/projects',
+    name: 'projects',
+    component: Projects
   }
 ]
 
-const router = new VueRouter({ routes });
+const router = new VueRouter({ 
+  routes,
+  mode: 'history'
+});
 
 Vue.use(VueRouter);
 
