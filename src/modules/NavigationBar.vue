@@ -29,9 +29,10 @@
                             <v-list-item-title><v-icon>content_paste</v-icon> Projects</v-list-item-title>
                         </v-list-item>
                         
-                        <v-list-item href="#">
+                        <v-list-item to="/music">
                             <v-list-item-title><v-icon>headphones</v-icon> Music</v-list-item-title>
                         </v-list-item>
+                        
                         <v-list-item href="#">
                             <v-list-item-title><v-icon>storefront</v-icon> Store</v-list-item-title>
                         </v-list-item>

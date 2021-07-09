@@ -7,6 +7,7 @@ import App from "./App.vue";
 // Views
 import Index from "./modules/index/Index";
 import Projects from "./modules/projects/Projects";
+import Music from "./modules/music/Music";
 
 Vue.config.productionTip = false;
 
@@ -20,6 +21,11 @@ const routes = [
     path: '/projects',
     name: 'projects',
     component: Projects
+  },
+  {
+    path: '/music',
+    name: 'music',
+    component: Music
   }
 ]
 
