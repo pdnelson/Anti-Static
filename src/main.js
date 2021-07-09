@@ -40,6 +40,17 @@ const router = new VueRouter({
   mode: 'history'
 });
 
+router.beforeEach((to, from, next) => {
+
+  // Change the page name in the tab for each router view
+  if      (to.name === 'index')     document.title = "Anti-Static Software";
+  else if (to.name === 'projects')  document.title = "Anti-Static Software - Projects";
+  else if (to.name === 'music')     document.title = "Anti-Static Software - Music";
+  else if (to.name === 'shop')      document.title = "Anti-Static Software - Store";
+
+  next();
+});
+
 Vue.use(VueRouter);
 
 new Vue({
