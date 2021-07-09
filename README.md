@@ -16,6 +16,8 @@ My personal website, but this time it isn't just a template; it's a real site!
 
 5. Install Vuetify version 2.5.6 (`npm install vuetify@2.5.6`)
 
+6. Install Vue Router version 3.5.2 (`npm install vue-router@3.5.2`)
+
 ## Running the application
 1. Navigate to the project's root directory and type `npm run serve` to start the project locally
 4. Open `localhost:8080/` within your browser of choice, and view the webapp
