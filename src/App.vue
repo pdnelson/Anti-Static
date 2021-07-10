@@ -35,6 +35,8 @@ export default {
   .header {
     margin-top: 20px;
     font-size: 35pt;
+    text-shadow: 4px 2px 2px #545454;
+    color: #242424
   }
   .footer {
     margin-top: 10px;
@@ -48,18 +50,15 @@ export default {
     background-image: linear-gradient(to bottom right, #838383, #5A5A5A);
   }
   .dark-blob {
-      margin: auto;
+    margin: auto;
     width: 65%;
     padding: 20px;
     margin-bottom: 25px;
     border-radius: 25px;
     background-image: linear-gradient(to top, #4D4D4D, #383838);
-      color: white;
-    font-family: 'IBM Plex Mono', monospace; 
-      box-shadow: 10px 10px 5px grey;
-  }
-  router-link.router-link-active, router-link.router-link-exact-active {
     color: white;
+    font-family: 'IBM Plex Mono', monospace; 
+    box-shadow: 10px 10px 5px grey;
   }
   @media screen and (max-width: 620px) {
     .header {
@@ -67,8 +66,8 @@ export default {
       font-size: 25pt;
     }
     .dark-blob {
-        width: auto;
-        border-radius: 0px;
+      width: auto;
+      border-radius: 0px;
     }
   }
 </style>
