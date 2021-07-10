@@ -13,7 +13,7 @@
 
                         <div v-for="category in categories" :key="category.id">
                             <v-expansion-panel-content>
-                                <project-category :category="category" mobile light></project-category>
+                                <project-category-head :category="category" mobile light></project-category-head>
                             </v-expansion-panel-content>
                         </div>
 
@@ -25,7 +25,7 @@
 
             <div class="proj-categories-desktop">
                 <div v-for="category in categories" :key="category.id">
-                    <project-category :category="category" desktop dark></project-category>
+                    <project-category-head :category="category" desktop dark></project-category-head>
                 </div>
             </div>
 
@@ -36,11 +36,11 @@
 
 <script>
 import { Categories } from './tempdata/categories';
-import ProjectCategory from './ProjectCategory';
+import ProjectCategoryHead from './ProjectCategoryHead';
 
 export default {
     components: {
-        projectCategory: ProjectCategory
+        projectCategoryHead: ProjectCategoryHead
     },
     data() {
         return {
