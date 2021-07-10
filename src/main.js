@@ -6,7 +6,7 @@ import App from "./App.vue";
 
 // Views
 import Index from "./modules/index/Index";
-import Projects from "./modules/projects/Projects";
+import ProjectList from "./modules/projects/ProjectList";
 import Music from "./modules/music/Music";
 import Shop from "./modules/shop/Shop";
 import CreateAccount from "./modules/accounts/CreateAccount";
@@ -25,7 +25,7 @@ const routes = [
   {
     path: '/projects',
     name: 'projects',
-    component: Projects
+    component: ProjectList
   },
   {
     path: '/music',
@@ -74,7 +74,7 @@ router.beforeEach((to, _, next) => {
   else if (to.name === 'login')           document.title = "Anti-Static Software - Log In";
   else if (to.name === 'register')        document.title = "Anti-Static Software - Register";
   else if (to.name === 'advanced-search') document.title = "Anti-Static Software - Search";
-  else if (to.name === 'search-results') document.title = "Anti-Static Software - Search Results";
+  else if (to.name === 'search-results')  document.title = "Anti-Static Software - Search Results";
 
   next();
 });
