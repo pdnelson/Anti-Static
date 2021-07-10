@@ -16,7 +16,7 @@
                                 <project-category :category="category" mobile light></project-category>
                             </v-expansion-panel-content>
                         </div>
-                        
+
                     </v-expansion-panel>
                 </v-expansion-panels>
             </div>
@@ -28,6 +28,8 @@
                     <project-category :category="category" desktop dark></project-category>
                 </div>
             </div>
+
+            
         </div>
     </div>
 </template>
@@ -61,12 +63,6 @@ export default {
 .proj-categories-desktop {
 	display: flex;
 	justify-content: center;
-	color: #Black;
-	font-family: 'IBM Plex Mono', monospace;
-	font-weight: bold;
-	margin-left: auto;
-	margin-right: auto; 
-	text-align: center;
 }
 
 .proj-categories-mobile {

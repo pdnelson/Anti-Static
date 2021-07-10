@@ -51,6 +51,11 @@ export default {
 </script>
 
 <style scoped>
+a {
+    color: black;
+    text-decoration: none;
+}
+
 .proj-category-container {
 	width: 20%px;
 	padding: 10px;
@@ -63,7 +68,8 @@ export default {
 
 .proj-category-heading {
 	color: black;
-	text-decoration: underline;
+	font-family: 'IBM Plex Mono', monospace;
+	font-weight: bold;
 }
 
 .proj-category-container-mobile {
