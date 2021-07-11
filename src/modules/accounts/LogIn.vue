@@ -46,15 +46,17 @@ export default {
     .dark-blob {
         width: 500px;
     }
+
     .forgot-password {
     }
+
     .makeItWhite {
         text-decoration-color: white;
         color: white;
         display: inline;
     }
-    
-    @media screen and (max-width: 500px) {
+
+    @media screen and (max-width: 620px) {
         .dark-blob {
             width: auto;
             border-radius: 0px;
