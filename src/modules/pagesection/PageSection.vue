@@ -4,7 +4,7 @@
             <div v-if="hasHeading">
                 <div class="center"><h2 class="dark-item">{{pageSection.heading}}</h2></div> 
             </div>
-            
+
             <div v-if="moreThanOneImage">
 
             </div>
@@ -15,8 +15,8 @@
                     <br/>
                 </div>
             </div>
-            <div class="section-description" ref="description">
-            </div>
+            <p class="section-description" ref="description">
+            </p>
         </div>
     </div>
 </template>

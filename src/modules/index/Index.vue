@@ -4,36 +4,33 @@
             <p class="header">Anti-Static Software</p>
         </div>
 
-        <div class="dark-blob">
-            <div class="center"><h2 class="dark-item">Welcome!</h2></div> 
-            <p>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                Welcome to Anti-Static Software! Feel free to peruse this website for anything that may be of interest, or that may assist you with your
-                next project.
-            </p>
-        </div>	
-
-        <div class="dark-blob">
-            <div class="center"><h2 class="dark-item">Recent Projects</h2></div> 
-            <p>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                Welcome to Anti-Static Software! Feel free to peruse this website for anything that may be of interest, or that may assist you with your
-                next project.
-            </p>
-        </div>	
-
-        <div class="dark-blob">
-            <div class="center"><h2 class="dark-item">Other Cool Stuff</h2></div> 
-            <p>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                Welcome to Anti-Static Software! Feel free to peruse this website for anything that may be of interest, or that may assist you with your
-                next project.
-            </p>
+        <div v-for="pageSection in pageSectionsInIndex" :key="pageSection.id">
+            <page-section :pageSection="pageSection"></page-section>
         </div>
     </div>
 </template>
 
 <script>
+import { PageSections } from '../../data/pageSections';
+import PageSection from "../pagesection/PageSection";
+
+export default {  
+  components: {
+    pageSection: PageSection
+  },
+  data() {
+      return {
+          pageSections: PageSections
+      };
+  },
+  computed: {
+    pageSectionsInIndex() {
+        return this.pageSections.filter(pageSection => 
+        pageSection.objectType == 'index')
+        .sort((a, b) => (a.order > b.order) ? 1 : -1)
+    }
+  }
+};
 </script>
 
 <style scoped>

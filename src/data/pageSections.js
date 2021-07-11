@@ -22,5 +22,29 @@ export const PageSections = [
         heading: 'How it Works',
         description: "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Like all the other oscilloscope programs, this works by taking point arrays and building wave files with them, which are played out of a computer's auxiliary jack and channeled into the X and Y axes of the oscilloscope (in X-Y mode). I think it looks way better on an analog oscilloscope, but it also works fine on a digital one.",
         order: 3
+    },
+    {
+        id: 5,
+        objectType: 'index',
+        objectId: 0,
+        heading: 'Welcome!',
+        description: '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to Anti-Static Software! Feel free to peruse this website for anything that may be of interest, or that may assist you with your next project.',
+        order: 1
+    },
+    {
+        id: 6,
+        objectType: 'index',
+        objectId: 0,
+        heading: 'Recent Projects',
+        description: '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to Anti-Static Software! Feel free to peruse this website for anything that may be of interest, or that may assist you with your next project.',
+        order: 2
+    },
+    {
+        id: 7,
+        objectType: 'index',
+        objectId: 0,
+        heading: 'Other Cool Stuff',
+        description: '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to Anti-Static Software! Feel free to peruse this website for anything that may be of interest, or that may assist you with your next project.',
+        order: 3
     }
 ]
