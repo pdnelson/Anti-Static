@@ -11,7 +11,6 @@
         <div v-if="mobile">
             <a :href="category.anchor">
                 <div class="proj-category-container-mobile">
-                    <img :src="getImageFromUrl()" :alt="category.name" class="proj-category-img-mobile">
                     <p class="proj-category-heading-mobile">{{category.name}}</p>
                 </div>
             </a>
@@ -56,11 +55,21 @@ export default {
   },
   computed: {
     projectsInCategory() {
-      return this.projects.filter(project => project.categoryId == this.category.id);
+        var projects;
+
+        // If the category ID is 1, i.e. 'Miscellaneous', then all projects of 
+        // categoryId 0 or 1 belong to the category
+        if(this.category.id == 1) {
+            projects = this.projects.filter(project => 
+            project.categoryId == this.category.id ||
+            project.categoryId == 0);
+        }
+        else projects = this.projects.filter(project => project.categoryId == this.category.id);
+
+        return projects;
     },
     categoryHasProjects() {
-      if (this.projectsInCategory.length > 0) return true;
-      return false;
+      return this.projectsInCategory.length > 0;
     }
   }
 };
@@ -103,11 +112,9 @@ a {
 }
 
 .proj-category-heading-mobile {
-    font-size: 13px;
-    float: left;
-    padding-left: 10px;
     margin: 0px;
-    margin-top: 17px;
+    font-size: 14px;
+    float: left;
     color: white;
     text-decoration: underline;
 }

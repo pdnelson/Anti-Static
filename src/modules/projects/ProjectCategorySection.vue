@@ -42,11 +42,21 @@ export default {
   },
   computed: {
     projectsInCategory() {
-      return this.projects.filter(project => project.categoryId == this.category.id);
+      var projects;
+
+      // If the category ID is 1, i.e. 'Miscellaneous', then all projects of 
+      // categoryId 0 or 1 belong to the category
+      if(this.category.id == 1) {
+          projects = this.projects.filter(project => 
+          project.categoryId == this.category.id ||
+          project.categoryId == 0);
+      }
+      else projects = this.projects.filter(project => project.categoryId == this.category.id);
+
+      return projects;
     },
     categoryHasProjects() {
-      if (this.projectsInCategory.length > 0) return true;
-      return false;
+      return this.projectsInCategory.length > 0;
     }
   }
 };

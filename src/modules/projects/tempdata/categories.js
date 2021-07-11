@@ -1,6 +1,6 @@
 export const Categories = [
     {
-        id: 1,
+        id: 5,
         name: 'Software',
         order: 1,
         anchor: '#Software',
@@ -32,7 +32,7 @@ export const Categories = [
         lightImage: './assets/iconelectrolux2Light.png'
     },
     {
-        id: 5,
+        id: 1,
         name: 'Miscellaneous',
         order: 5,
         anchor: '#Miscellaneous',
