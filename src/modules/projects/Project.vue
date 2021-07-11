@@ -1,6 +1,12 @@
 <template>
     <div>
-        {{currentProject.name}}
+        <div v-if="projectExists">
+            <div class="curr-proj-name">{{currentProject.name}}</div>
+        </div>
+
+        <div v-else class="doesnt-exist">
+            Project {{$route.params.id}} does not exist!
+        </div>
     </div>
 </template>
 
@@ -13,6 +19,9 @@ export default {
           projects: Projects,
       };
   },
+  created() {
+      console.log("jhi");
+  },    
   methods: {
         getImageFromUrl: function() {
             return require('' + this.category.lightImage);
@@ -23,11 +32,27 @@ export default {
   },
   computed: {
     currentProject() {
-      return this.projects.find(project => project.id == this.$route.params.id)
+      return this.projects.find(project => project.id == this.$route.params.id);
+    },
+    projectExists() {
+        return this.currentProject;
     }
   }
 };
 </script>
 
 <style scoped>
+    .doesnt-exist {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 15pt;
+    }
+
+    .curr-proj-name {
+        font-size: 25pt;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
 </style>
