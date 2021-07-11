@@ -1,6 +1,8 @@
 <template>
   <v-app>
-    <NavigationBar/>
+    <navigation-bar/>
+
+    <scroll-to-top-button/>
 
     <router-view></router-view>
     
@@ -12,12 +14,14 @@
 
 <script>
 import NavigationBar from "./modules/NavigationBar";
+import ScrollToTopButton from "./modules/ScrollToTopButton";
 
 export default {
   name: "App",
 
   components: {
-    NavigationBar
+    navigationBar: NavigationBar,
+    scrollToTopButton: ScrollToTopButton
   },
 
   data() {
