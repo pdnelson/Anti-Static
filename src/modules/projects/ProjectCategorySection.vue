@@ -1,5 +1,5 @@
 <template>
-    <div :id="getIdFromAnchor(category.anchor)">
+    <div :id="getIdFromAnchor(category.anchor)" class="anchored">
         <div class="dark-blob">
             <div class="center"><img :src="getImageFromUrl()" class="proj-category-img-lower"></div>
 
@@ -27,6 +27,10 @@ export default {
 </script>
 
 <style scoped>
+.anchored {
+	scroll-margin-top: 1em;	
+}
+
 .proj-category-img-lower {
 	width: auto;
 	height: 80px;
