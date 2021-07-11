@@ -29,6 +29,9 @@ export default {
 </script>
 
 <style>
+  html {
+    scroll-behavior: smooth;
+  }
   .center {
     text-align: center;
   }
