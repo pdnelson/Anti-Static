@@ -29,7 +29,9 @@
                 </div>
             </div>
 
-            
+            <div v-for="category in categories" :key="category.id">
+                <project-category-section :category="category"></project-category-section>
+            </div>
         </div>
     </div>
 </template>
@@ -37,10 +39,12 @@
 <script>
 import { Categories } from './tempdata/categories';
 import ProjectCategoryHead from './ProjectCategoryHead';
+import ProjectCategorySection from './ProjectCategorySection';
 
 export default {
     components: {
-        projectCategoryHead: ProjectCategoryHead
+        projectCategoryHead: ProjectCategoryHead,
+        projectCategorySection: ProjectCategorySection
     },
     data() {
         return {
