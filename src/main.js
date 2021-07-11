@@ -7,6 +7,7 @@ import App from "./App.vue";
 // Views
 import Index from "./modules/index/Index";
 import ProjectList from "./modules/projects/ProjectList";
+import Project from "./modules/projects/Project";
 import Music from "./modules/music/Music";
 import Shop from "./modules/shop/Shop";
 import CreateAccount from "./modules/accounts/CreateAccount";
@@ -26,6 +27,11 @@ const routes = [
     path: '/projects',
     name: 'projects',
     component: ProjectList
+  },
+  {
+    path: '/projects/:id',
+    name: 'project-view',
+    component: Project
   },
   {
     path: '/music',

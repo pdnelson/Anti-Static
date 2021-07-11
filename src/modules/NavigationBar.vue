@@ -25,19 +25,19 @@
                             <v-list-item-title><v-icon>home</v-icon> Home</v-list-item-title>
                         </v-list-item>
 
-                        <v-list-item to="projects">
+                        <v-list-item to="/projects">
                             <v-list-item-title><v-icon>content_paste</v-icon> Projects</v-list-item-title>
                         </v-list-item>
                         
-                        <v-list-item to="music">
+                        <v-list-item to="/music">
                             <v-list-item-title><v-icon>headphones</v-icon> Music</v-list-item-title>
                         </v-list-item>
 
-                        <v-list-item to="store">
+                        <v-list-item to="/store">
                             <v-list-item-title><v-icon>storefront</v-icon> Store</v-list-item-title>
                         </v-list-item>
 
-                        <v-list-item to="advanced-search">
+                        <v-list-item to="/advanced-search">
                             <v-list-item-title><v-icon>search</v-icon> Advanced Search</v-list-item-title>
                         </v-list-item>
 
@@ -77,10 +77,10 @@
 
                 <div class="page-nav">
                     <v-list dark>
-                        <v-list-item to="login">
+                        <v-list-item to="/login">
                             <v-list-item-title><v-icon>login</v-icon> Log In</v-list-item-title>
                         </v-list-item>
-                        <v-list-item to="register">
+                        <v-list-item to="/register">
                             <v-list-item-title><v-icon>app_registration</v-icon> Sign Up</v-list-item-title>
                         </v-list-item>
                     </v-list>

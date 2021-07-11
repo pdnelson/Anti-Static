@@ -1,7 +1,11 @@
 <template>
-    <div class="proj-heading">
-        <div class="proj-name"> {{project.name}}</div> 
-        <div class="proj-year">{{project.year}}</div> 
+    <div>
+        <router-link :to="{path: '/projects/' + project.id}">
+            <div class="proj-heading">
+                <div class="proj-name"> {{project.name}}</div> 
+                <div class="proj-year">{{project.year}}</div> 
+            </div>
+        </router-link>
     </div>
 </template>
 
@@ -26,6 +30,7 @@ export default {
         cursor: pointer;
         transition: box-shadow 0.2s linear;
         transition: background-color 0.2s linear;
+        color: white;
     }
 
     .proj-heading:hover {
