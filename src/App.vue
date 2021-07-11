@@ -43,7 +43,8 @@ export default {
     margin-top: 20px;
     font-size: 35pt;
     text-shadow: 4px 2px 2px #545454;
-    color: #242424
+    color: #242424;
+    text-align: center;
   }
   .footer {
     margin-top: 10px;

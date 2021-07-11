@@ -1,7 +1,7 @@
 <template>
     <div>
         <div v-if="projectExists">
-            <div class="curr-proj-name">{{currentProject.name}}</div>
+            <p class="header">{{currentProject.name}}</p>
         </div>
 
         <div v-else class="doesnt-exist">
@@ -20,12 +20,12 @@ export default {
       };
   },   
   methods: {
-        getImageFromUrl: function() {
-            return require('' + this.category.lightImage);
-        },
-        getIdFromAnchor: function(anchor) {
-            return anchor.substring(1, anchor.length);
-        }
+    getImageFromUrl: function() {
+        return require('' + this.category.lightImage);
+    },
+    getIdFromAnchor: function(anchor) {
+        return anchor.substring(1, anchor.length);
+    }
   },
   computed: {
     currentProject() {
@@ -44,12 +44,5 @@ export default {
         margin-top: 20px;
         margin-bottom: 10px;
         font-size: 15pt;
-    }
-
-    .curr-proj-name {
-        font-size: 25pt;
-        text-align: center;
-        margin-top: 20px;
-        margin-bottom: 10px;
     }
 </style>
