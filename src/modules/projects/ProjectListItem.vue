@@ -2,7 +2,7 @@
     <div>
         <router-link :to="{path: '/projects/' + project.id}">
             <div class="proj-heading">
-                <div class="proj-name"> {{project.name}}</div> 
+                <div class="proj-name">{{project.name}}</div> 
                 <div class="proj-year">{{project.year}}</div> 
             </div>
         </router-link>

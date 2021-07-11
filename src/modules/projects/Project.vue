@@ -18,10 +18,7 @@ export default {
       return {
           projects: Projects,
       };
-  },
-  created() {
-      console.log("jhi");
-  },    
+  },   
   methods: {
         getImageFromUrl: function() {
             return require('' + this.category.lightImage);
