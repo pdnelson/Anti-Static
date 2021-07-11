@@ -1,17 +1,17 @@
 export const Categories = [
     {
         id: 1,
-        name: 'Programming',
+        name: 'Software',
         order: 1,
-        anchor: '#Programming',
+        anchor: '#Software',
         darkImage: './assets/ProgrammingIcon.png',
         lightImage: './assets/ProgrammingIconLight.png'
     },
     {
         id: 2,
-        name: 'Computer Hardware',
+        name: 'Hardware',
         order: 2,
-        anchor: '#ComputerHardware',
+        anchor: '#Hardware',
         darkImage: './assets/motherboardIcon.png',
         lightImage: './assets/motherboardIconLight.png'
     },
