@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div v-if="categoryHasProjects">
         <div v-if="desktop">
             <a :href="category.anchor">
                 <div class="proj-category-container">
@@ -20,7 +20,14 @@
 </template>
 
 <script>
+import { Projects } from './tempdata/projects';
+
 export default {
+  data() {
+      return {
+          projects: Projects,
+      };
+  },
   props: {
     category: {
       type: Object
@@ -46,6 +53,15 @@ export default {
             else url = this.category.darkImage; // Dark is the default
             return require('' + url);
         }
+  },
+  computed: {
+    projectsInCategory() {
+      return this.projects.filter(project => project.categoryId == this.category.id);
+    },
+    categoryHasProjects() {
+      if (this.projectsInCategory.length > 0) return true;
+      return false;
+    }
   }
 };
 </script>

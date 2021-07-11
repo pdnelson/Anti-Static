@@ -2,7 +2,7 @@
     <div>
         <div class="center">
 
-            <div class="proj-categories-mobile">
+            <div v-if="projectsArePresent" class="proj-categories-mobile">
                 <v-expansion-panels dark tile>
                     <v-expansion-panel @click="expandCategories()">
 
@@ -32,11 +32,16 @@
             <div v-for="category in categories" :key="category.id">
                 <project-category-section :category="category"></project-category-section>
             </div>
+
+            <div v-if="!projectsArePresent">
+                There are no projects yet!
+            </div>
         </div>
     </div>
 </template>
 
 <script>
+import { Projects } from './tempdata/projects';
 import { Categories } from './tempdata/categories';
 import ProjectCategoryHead from './ProjectCategoryHead';
 import ProjectCategorySection from './ProjectCategorySection';
@@ -50,7 +55,8 @@ export default {
         return {
             categories: Categories,
             mobileCategoriesExpanded: false,
-            showOrHide: "Show"
+            showOrHide: "Show",
+            projects: Projects
         };
     },
     methods: {
@@ -58,6 +64,11 @@ export default {
             this.mobileCategoriesExpanded = !this.mobileCategoriesExpanded;
             if(this.mobileCategoriesExpanded) this.showOrHide = "Hide";
             else this.showOrHide = "Show";
+        }
+    },
+    computed: {
+        projectsArePresent() {
+            return this.projects.length > 0
         }
     }
 };
