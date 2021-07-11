@@ -2,20 +2,11 @@
     <div>
         <div v-if="projectExists">
             <p class="header">{{currentProject.name}}</p>
-            <div class="dark-blob">
-                <div v-if="moreThanOneImage">
 
-                </div>
-
-                <div v-else>
-                    <div v-if="hasOneImage">
-                        <img :src="getProjectImage()" class="proj-img"/>
-                        <br/>
-                    </div>
-                </div>
-                <div class="proj-description" ref="description">
-                </div>
+            <div v-for="pageSection in pageSectionsInProject" :key="pageSection.id">
+                <page-section :pageSection="pageSection"></page-section>
             </div>
+
         </div>
 
         <div v-else class="doesnt-exist">
@@ -27,8 +18,13 @@
 <script>
 import { Projects } from './tempdata/projects';
 import { Images } from '../../data/images';
+import { PageSections } from '../../data/pageSections';
+import PageSection from "../pagesection/PageSection";
 
-export default {
+export default {  
+  components: {
+    pageSection: PageSection
+  },
   mounted() {
     // We must process the description this way to allow easier use of HTML styling in the blob sections...
     this.$refs.description.innerHTML = this.currentProject.description;
@@ -36,15 +32,13 @@ export default {
   data() {
       return {
           projects: Projects,
-          images: Images
+          images: Images,
+          pageSections: PageSections
       };
   },   
   methods: {
     getProjectImage: function() {
         return this.projectImages[0].image;
-    },
-    getIdFromAnchor: function(anchor) {
-        return anchor.substring(1, anchor.length);
     }
   },
   computed: {
@@ -65,6 +59,12 @@ export default {
     },
     hasOneImage() {
         return this.projectImages.length == 1;
+    },
+    pageSectionsInProject() {
+        return this.pageSections.filter(pageSection => 
+        pageSection.objectType == 'project' &&
+        pageSection.objectId == this.$route.params.id)
+        .sort((a, b) => (a.order > b.order) ? 1 : -1)
     }
   }
 };
