@@ -1,6 +1,7 @@
 <template>
     <div class="back-button">
         <v-btn
+            fab
             dark
             fixed
             bottom
@@ -8,7 +9,7 @@
             color="black"
             @click="backTo"
             >
-            Back to {{this.data.name}}&nbsp;&nbsp;<v-icon>undo</v-icon>
+            <v-icon>undo</v-icon>
         </v-btn>
     </div>
 </template>
@@ -20,21 +21,13 @@ export default {
       prevRoute: null
     }
   },
-  props: {
-      data: {
-          type: Object
-      }
-  },
   methods: {
     backTo() {
-      this.$router.push(this.data.url);
+      this.$router.go(-1);
     }
   }
 };
 </script>
 
 <style scoped>
-.back-button {
-    opacity: 0.5;
-}
 </style>

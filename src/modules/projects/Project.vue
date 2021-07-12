@@ -13,7 +13,7 @@
             Project {{$route.params.id}} does not exist!
         </div>
 
-        <back-to-previous-page :data="backButtonData"></back-to-previous-page>
+        <back-to-previous-page></back-to-previous-page>
 
     </div>
 </template>
@@ -34,8 +34,7 @@ export default {
       return {
           projects: Projects,
           images: Images,
-          pageSections: PageSections,
-          backButtonData: {name: 'Projects', url:'/projects'}
+          pageSections: PageSections
       };
   },   
   methods: {
