@@ -11,6 +11,7 @@
     "@vue/cli-plugin-babel": "4.1.1",
     "bootstrap-node": "^1.0.0",
     "vue": "^2.6.11",
+    "vue-gallery-slideshow": "^1.5.2",
     "vue-router": "^3.5.2",
     "vuetify": "^2.5.6"
   },
