@@ -19,7 +19,7 @@ export const Projects = [
     },
     {
         id: 4,
-        name: 'Oscilloscope Blackjack',
+        name: 'Auxiliary Splitter',
         year: "2019",
         categoryId: 2,
     },

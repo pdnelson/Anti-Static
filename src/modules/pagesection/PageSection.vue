@@ -2,7 +2,7 @@
     <div>
         <div class="dark-blob">
             <div v-if="hasHeading">
-                <div class="center"><h2 class="dark-item">{{pageSection.heading}}</h2></div> 
+                <h2 class="section-heading">{{pageSection.heading}}</h2>
             </div>
 
             <div v-if="moreThanOneImage" class="image-gallery">
@@ -16,8 +16,7 @@
                     <br/>
                 </div>
             </div>
-            <p class="section-description" ref="description">
-            </p>
+            <p class="section-description" ref="description"></p>
         </div>
     </div>
 </template>
@@ -72,6 +71,11 @@ export default {
 </script>
 
 <style scoped>
+    .section-heading {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
     .section-img {
         margin-left: auto;
         margin-right: auto;
