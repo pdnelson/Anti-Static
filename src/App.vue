@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import NavigationBar from "./modules/NavigationBar";
-import ScrollToTopButton from "./modules/ScrollToTopButton";
+import NavigationBar from "./modules/utilities/NavigationBar";
+import ScrollToTopButton from "./modules/utilities/ScrollToTopButton";
 
 export default {
   name: "App",
