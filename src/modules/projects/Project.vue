@@ -12,6 +12,9 @@
         <div v-else class="doesnt-exist">
             Project {{$route.params.id}} does not exist!
         </div>
+
+        <back-to-previous-page :data="backButtonData"></back-to-previous-page>
+
     </div>
 </template>
 
@@ -20,20 +23,19 @@ import { Projects } from './tempdata/projects';
 import { Images } from '../../data/images';
 import { PageSections } from '../../data/pageSections';
 import PageSection from "../pagesection/PageSection";
+import BackToPreviousPage from "../utilities/BackToPreviousPage";
 
 export default {  
   components: {
-    pageSection: PageSection
-  },
-  mounted() {
-    // We must process the description this way to allow easier use of HTML styling in the blob sections...
-    this.$refs.description.innerHTML = this.currentProject.description;
+    pageSection: PageSection,
+    backToPreviousPage: BackToPreviousPage
   },
   data() {
       return {
           projects: Projects,
           images: Images,
-          pageSections: PageSections
+          pageSections: PageSections,
+          backButtonData: {name: 'Projects', url:'/projects'}
       };
   },   
   methods: {
