@@ -79,13 +79,13 @@ export const Projects = [
     },
     {
         id: 14,
-        name: 'Oscilloscope Blackjack',
+        name: 'Oscilloscope Blackjack :)',
         year: "2019",
         categoryId: 5,
     },
     {
         id: 15,
-        name: 'Oscilloscope Blackjack THIS ONE HAS STUFF',
+        name: 'Oscilloscope Blackjack !!!',
         year: "2019",
         categoryId: 5,
     }
