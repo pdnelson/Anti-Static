@@ -4,6 +4,10 @@
             <div v-if="hasHeading">
                 <h2 class="section-heading">{{pageSection.heading}}</h2>
             </div>
+            <div v-else class="desktop-only">
+                <!-- Extra space so that the images aren't smacked right up against the top -->
+                <br/><br/>
+            </div>
 
             <div v-if="moreThanOneImage" class="image-gallery">
                 <img class="image" v-for="(image, i) in pageSectionImages" :src="image" :key="i" @click="index = i">
@@ -103,6 +107,10 @@ export default {
     @media screen and (max-width: 620px) {
     .section-img {
       width: 100%;
+    }
+    
+    .desktop-only {
+        display: none;
     }
   }
 </style>

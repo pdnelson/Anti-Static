@@ -46,5 +46,11 @@ export const Images = [
         objectType: 'pagesection',
         objectId: 8,
         image: 'https://cdn.discordapp.com/attachments/625801308854812684/860893425733468220/static_cover.png'
+    },
+    {
+        id: 12,
+        objectType: 'pagesection',
+        objectId: 9,
+        image: 'https://cdn.discordapp.com/attachments/625801308854812684/863971542529736714/20210711_223340.jpg'
     }
 ]

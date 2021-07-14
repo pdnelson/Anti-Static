@@ -1,7 +1,7 @@
 <template>
     <div>
         <div v-if="projectExists">
-            <p class="header">{{currentProject.name}}</p>
+            <p class="header">{{currentProject.name}} ({{currentProject.year}})</p>
 
             <div v-for="pageSection in pageSectionsInProject" :key="pageSection.id">
                 <page-section :pageSection="pageSection"></page-section>
