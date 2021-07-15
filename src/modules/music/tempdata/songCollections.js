@@ -4,7 +4,7 @@ export const SongCollections = [
         name: "The Static",
         yearCompiled: 2017,
         format: "CD, Digital Release",
-        type: "EP",
+        type: "ep",
         order: 1
     },
     {
@@ -12,7 +12,7 @@ export const SongCollections = [
         name: "Tool",
         yearCompiled: 2016,
         format: "Digital Release",
-        type: "Single",
+        type: "single",
         order: 2
     },
     {
@@ -20,7 +20,7 @@ export const SongCollections = [
         name: "Negativity",
         yearCompiled: 2017,
         format: "Digital Release",
-        type: "Single",
+        type: "single",
         order: 2
     }
 ]

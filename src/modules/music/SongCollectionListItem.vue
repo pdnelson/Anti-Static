@@ -1,4 +1,5 @@
 <template>
+    <div>jhi</div>
 </template>
 
 <script>

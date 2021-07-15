@@ -82,5 +82,17 @@ export const Songs = [
         trackNumber: 1,
         audio: "",
         dateRecorded: "December 2017"
+    },
+    {
+        id: 8,
+        collectionId: 0,
+        name: "Where You're Going",
+        description: "asdlfkjasldfhj",
+        length: "??:??",
+        personnel: "Patrick N. - Guitar, Bass, Drums, Vocals",
+        genre: "Garage Rock, Lo-Fi",
+        trackNumber: 0,
+        audio: "",
+        dateRecorded: "June 2018"
     }
 ]
