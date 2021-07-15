@@ -8,7 +8,7 @@ import App from "./App.vue";
 import Index from "./modules/index/Index";
 import ProjectList from "./modules/projects/ProjectList";
 import Project from "./modules/projects/Project";
-import Music from "./modules/music/Music";
+import MusicList from "./modules/music/MusicList";
 import Shop from "./modules/shop/Shop";
 import CreateAccount from "./modules/accounts/CreateAccount";
 import LogIn from "./modules/accounts/LogIn";
@@ -36,7 +36,7 @@ const routes = [
   {
     path: '/music',
     name: 'music',
-    component: Music
+    component: MusicList
   },
   {
     path: '/store',
