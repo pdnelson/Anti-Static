@@ -32,7 +32,9 @@
         <div v-if="miscSongsArePresent">
             <div class="dark-blob">
                 <p class="category-type">Miscellaneous</p>
-                <song-collection-list-item></song-collection-list-item>
+                <div v-for="song in miscSongs" :key="song.id">
+                    <song-list-item></song-list-item>
+                </div>
             </div>
         </div>
 
@@ -43,10 +45,12 @@
 import { SongCollections } from './tempdata/songCollections';
 import { Songs } from './tempdata/songs';
 import SongCollectionListItem from './SongCollectionListItem';
+import SongListItem from './SongListItem';
 
 export default {
     components: {
-        songCollectionListItem: SongCollectionListItem
+        songCollectionListItem: SongCollectionListItem,
+        songListItem: SongListItem
     },
     data() {
         return {
@@ -82,6 +86,9 @@ export default {
         },
         miscSongsArePresent() {
             return this.songs.filter(song => song.collectionId === 0).length > 0;
+        },
+        miscSongs() {
+            return this.songs.filter(song => song.collectionId === 0);
         }
     }
 };
