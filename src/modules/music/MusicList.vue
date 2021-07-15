@@ -3,29 +3,37 @@
         <p class="header">My Music</p>
 
         <div v-if="albumCollectionsArePresent">
-            <p class="category-type">Albums</p>
-            <div v-for="collection in albumCollections" :key="collection.id">
-                <song-collection-list-item :collection="collection"></song-collection-list-item>
+            <div class="dark-blob">
+                <p class="category-type">Albums</p>
+                <div v-for="collection in albumCollections" :key="collection.id">
+                    <song-collection-list-item :collection="collection"></song-collection-list-item>
+                </div>
             </div>
         </div>
 
         <div v-if="epCollectionsArePresent">
-            <p class="category-type">Extended Plays (EPs)</p>
-            <div v-for="collection in epCollections" :key="collection.id">
-                <song-collection-list-item :collection="collection"></song-collection-list-item>
+            <div class="dark-blob">
+                <p class="category-type">Extended Plays (EPs)</p>
+                <div v-for="collection in epCollections" :key="collection.id">
+                    <song-collection-list-item :collection="collection"></song-collection-list-item>
+                </div>
             </div>
         </div>
         
         <div v-if="singleCollectionsArePresent">
-            <p class="category-type">Singles</p>
-            <div v-for="collection in singleCollections" :key="collection.id">
-                <song-collection-list-item :collection="collection"></song-collection-list-item>
+            <div class="dark-blob">
+                <p class="category-type">Singles</p>
+                <div v-for="collection in singleCollections" :key="collection.id">
+                    <song-collection-list-item :collection="collection"></song-collection-list-item>
+                </div>
             </div>
         </div>
 
         <div v-if="miscSongsArePresent">
-            <p class="category-type">Miscellaneous</p>
-            <song-collection-list-item></song-collection-list-item>
+            <div class="dark-blob">
+                <p class="category-type">Miscellaneous</p>
+                <song-collection-list-item></song-collection-list-item>
+            </div>
         </div>
 
     </div>
@@ -81,7 +89,6 @@ export default {
 
 <style scoped>
 .category-type {
-      margin-top: 15px;
       font-size: 20pt;
       text-align: center;
 }
