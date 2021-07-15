@@ -59,7 +59,8 @@ export default {
   }
   .dark-blob {
     margin: auto;
-    width: 65%;
+    max-width: 900px;
+    width: 90%;
     padding: 20px;
     margin-bottom: 25px;
     border-radius: 25px;
