@@ -64,5 +64,11 @@ export const Images = [
         objectType: 'songcollection_NOART',
         objectId: 0,
         image: 'https://cdn.discordapp.com/attachments/625801308854812684/865381953305182218/noart.png'
+    },
+    {
+        id: 14,
+        objectType: 'songcollection',
+        objectId: 1,
+        image: 'https://cdn.discordapp.com/attachments/625801308854812684/865415658732519442/unknown.png'
     }
 ]
