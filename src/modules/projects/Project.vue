@@ -26,6 +26,9 @@ import PageSection from "../pagesection/PageSection";
 import BackToPreviousPage from "../utilities/BackToPreviousPage";
 
 export default {  
+  mounted() {
+    document.title = "Anti-Static - " + this.currentProject.name;
+  },
   components: {
     pageSection: PageSection,
     backToPreviousPage: BackToPreviousPage
