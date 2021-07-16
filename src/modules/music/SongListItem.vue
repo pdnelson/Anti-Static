@@ -1,5 +1,5 @@
 <template>
-    <div>jhi</div>
+    <div>song</div>
 </template>
 
 <script>

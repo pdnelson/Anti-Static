@@ -9,6 +9,7 @@ import Index from "./modules/index/Index";
 import ProjectList from "./modules/projects/ProjectList";
 import Project from "./modules/projects/Project";
 import MusicList from "./modules/music/MusicList";
+import SongCollection from "./modules/music/SongCollection";
 import Shop from "./modules/shop/Shop";
 import CreateAccount from "./modules/accounts/CreateAccount";
 import LogIn from "./modules/accounts/LogIn";
@@ -37,6 +38,11 @@ const routes = [
     path: '/music',
     name: 'music',
     component: MusicList
+  },
+  {
+    path: '/music/collection/:id',
+    name: 'music-collection',
+    component: SongCollection
   },
   {
     path: '/store',

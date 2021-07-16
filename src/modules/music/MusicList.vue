@@ -6,7 +6,7 @@
             <div class="dark-blob">
                 <p class="category-type">Albums</p>
                 <div v-for="collection in albumCollections" :key="collection.id">
-                    <song-collection-list-item :collection="collection"></song-collection-list-item>
+                    <song-collection-list-item :songCollection="collection"></song-collection-list-item>
                 </div>
             </div>
         </div>
@@ -15,7 +15,7 @@
             <div class="dark-blob">
                 <p class="category-type">Extended Plays (EPs)</p>
                 <div v-for="collection in epCollections" :key="collection.id">
-                    <song-collection-list-item :collection="collection"></song-collection-list-item>
+                    <song-collection-list-item :songCollection="collection"></song-collection-list-item>
                 </div>
             </div>
         </div>
@@ -24,7 +24,7 @@
             <div class="dark-blob">
                 <p class="category-type">Singles</p>
                 <div v-for="collection in singleCollections" :key="collection.id">
-                    <song-collection-list-item :collection="collection"></song-collection-list-item>
+                    <song-collection-list-item :songCollection="collection"></song-collection-list-item>
                 </div>
             </div>
         </div>
