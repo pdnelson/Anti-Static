@@ -59,7 +59,8 @@ export default {
             image.objectType == 'pagesection' &&
             image.objectId == this.pageSection.id
         )
-        .map(image => image.image)
+        .sort((a, b) => (a.order > b.order) ? 1 : -1)
+        .map(image => image.image);
     },
     moreThanOneImage() {
         return this.pageSectionImages.length > 1;
