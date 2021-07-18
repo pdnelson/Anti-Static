@@ -26,8 +26,13 @@
 
       <div class="dark-blob">
           <h2 class="description-heading">Track Listing</h2>
-          <div v-for="song in songsInCollection" :key="song.id">
-              <song-list-item :song="song"></song-list-item>
+          <div v-if="collectionHasSongs">
+            <div v-for="song in songsInCollection" :key="song.id">
+                <song-list-item :song="song"></song-list-item>
+            </div>
+          </div>
+          <div v-else class="center">
+            This collection has no songs yet!
           </div>
       </div>
 
@@ -62,6 +67,9 @@ export default {
   computed: {
     currentCollection() {
       return this.songCollections.find(collection => collection.id == this.$route.params.id);
+    },
+    collectionHasSongs() {
+      return this.getTrackCount > 0;
     },
     hasArt() {
       return this.collectionArt !== undefined;
@@ -98,14 +106,17 @@ export default {
       return "??:?? (coming soon)"
     },
     songsInCollection() {
-      let relationships = this.songRelationships.filter(relationship => relationship.collectionId === this.currentCollection.id);
-      let songs = []
+      if(this.songs !== null && this.songs !== undefined) {
+        let relationships = this.songRelationships.filter(relationship => relationship.collectionId === this.currentCollection.id);
+        let songs = []
 
-      relationships.forEach(relationship =>
-          songs.push(this.songs.find(song => song.id === relationship.songId))
-      );
+        relationships.forEach(relationship =>
+            songs.push(this.songs.find(song => song.id === relationship.songId))
+        );
 
-      return songs;
+        return songs;
+      }
+      else return [];
     },
     hasDescription() {
       return (

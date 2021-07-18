@@ -38,6 +38,10 @@
             </div>
         </div>
 
+        <div v-if="noSongsOrCollectionsPresent" class="center">
+            No songs or collections are present yet!
+        </div>
+
     </div>
 </template>
 
@@ -93,6 +97,12 @@ export default {
             return this.songs.filter(song => 
                 this.songRelationships.find(relationship => relationship.songId == song.id) === undefined
             );
+        },
+        noSongsOrCollectionsPresent() {
+            let collectionCount = this.songCollections.length;
+            let songCount = this.songs.length;
+
+            return (collectionCount < 1 && songCount < 1);
         }
     }
 };
