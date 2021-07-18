@@ -53,7 +53,7 @@ export default {
       }
       else projects = this.projects.filter(project => project.categoryId == this.category.id);
 
-      return projects;
+      return projects.sort((a, b) => (a.order > b.order) ? 1 : -1);
     },
     categoryHasProjects() {
       return this.projectsInCategory.length > 0;
