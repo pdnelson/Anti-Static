@@ -6,9 +6,8 @@
                 <v-expansion-panels dark tile>
                     <v-expansion-panel @click="expandCategories()">
 
-                        <v-expansion-panel-header>
-                            {{showOrHide}} All Project Categories&nbsp;&nbsp;
-                            <div class="mobile-proj-icon"><v-icon>{{mobileCategoriesExpanded ? 'expand_less' : 'expand_more'}}</v-icon></div>
+                        <v-expansion-panel-header expand-icon="expand_more">
+                            {{showOrHide}} All Project Categories
                         </v-expansion-panel-header>
 
                         <div v-for="category in categories" :key="category.id">
