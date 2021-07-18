@@ -96,7 +96,7 @@ export default {
         miscSongs() {
             return this.songs.filter(song => 
                 this.songRelationships.find(relationship => relationship.songId == song.id) === undefined
-            );
+            ).sort((a, b) => (a.trackNumber > b.trackNumber) ? 1 : -1);
         },
         noSongsOrCollectionsPresent() {
             let collectionCount = this.songCollections.length;

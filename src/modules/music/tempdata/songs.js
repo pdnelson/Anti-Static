@@ -83,7 +83,7 @@ export const Songs = [
         length: "??:??",
         personnel: "Patrick N. - Guitar, Bass, Drums, Vocals",
         genre: "Garage Rock, Lo-Fi",
-        trackNumber: 0,
+        trackNumber: 2,
         audio: "",
         dateRecorded: "June 2018"
     },
@@ -94,7 +94,7 @@ export const Songs = [
         length: "??:??",
         personnel: "Patrick N. - Guitar, Bass, Drums, Vocals",
         genre: "Garage Rock, Lo-Fi",
-        trackNumber: 0,
+        trackNumber: 1,
         audio: "",
         dateRecorded: "December 2018"
     }
