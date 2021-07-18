@@ -114,7 +114,7 @@ export default {
             songs.push(this.songs.find(song => song.id === relationship.songId))
         );
 
-        return songs;
+        return songs.sort((a, b) => (a.trackNumber > b.trackNumber) ? 1 : -1);
       }
       else return [];
     },
