@@ -7,7 +7,7 @@
                     <v-expansion-panel @click="expandCategories()">
 
                         <v-expansion-panel-header expand-icon="expand_more">
-                            {{showOrHide}} All Project Categories
+                            Project Categories
                         </v-expansion-panel-header>
 
                         <div v-for="category in categories" :key="category.id">
@@ -54,16 +54,8 @@ export default {
         return {
             categories: Categories,
             mobileCategoriesExpanded: false,
-            showOrHide: "Show",
             projects: Projects
         };
-    },
-    methods: {
-        expandCategories: function() {
-            this.mobileCategoriesExpanded = !this.mobileCategoriesExpanded;
-            if(this.mobileCategoriesExpanded) this.showOrHide = "Hide";
-            else this.showOrHide = "Show";
-        }
     },
     computed: {
         projectsArePresent() {
