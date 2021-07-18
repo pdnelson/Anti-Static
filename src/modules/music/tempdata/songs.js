@@ -1,7 +1,6 @@
 export const Songs = [
     {
         id: 1,
-        collectionId: 1,
         name: "You're Doing It Wrong",
         description: "asdlfkjasldfhj",
         length: "??:??",
@@ -13,7 +12,6 @@ export const Songs = [
     },
     {
         id: 2,
-        collectionId: 1,
         name: "Guessing Game",
         description: "asdlfkjasldfhj",
         length: "??:??",
@@ -25,7 +23,6 @@ export const Songs = [
     },
     {
         id: 3,
-        collectionId: 1,
         name: "Static",
         description: "asdlfkjasldfhj",
         length: "??:??",
@@ -37,7 +34,6 @@ export const Songs = [
     },
     {
         id: 4,
-        collectionId: 1,
         name: "Life's a Mystery",
         description: "asdlfkjasldfhj",
         length: "??:??",
@@ -49,7 +45,6 @@ export const Songs = [
     },
     {
         id: 5,
-        collectionId: 2,
         name: "Tool",
         description: "asdlfkjasldfhj",
         length: "??:??",
@@ -61,7 +56,6 @@ export const Songs = [
     },
     {
         id: 6,
-        collectionId: 2,
         name: "Tell Me Why",
         description: "asdlfkjasldfhj",
         length: "??:??",
@@ -73,7 +67,6 @@ export const Songs = [
     },
     {
         id: 7,
-        collectionId: 3,
         name: "Negativity",
         description: "asdlfkjasldfhj",
         length: "??:??",
@@ -85,7 +78,6 @@ export const Songs = [
     },
     {
         id: 8,
-        collectionId: 0,
         name: "Where You're Going",
         description: "asdlfkjasldfhj",
         length: "??:??",
@@ -97,7 +89,6 @@ export const Songs = [
     },
     {
         id: 9,
-        collectionId: 0,
         name: "Unacceptable",
         description: "asdlfkjasldfhj",
         length: "??:??",

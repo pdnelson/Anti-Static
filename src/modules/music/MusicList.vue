@@ -33,7 +33,7 @@
             <div class="dark-blob">
                 <p class="category-type">Miscellaneous</p>
                 <div v-for="song in miscSongs" :key="song.id">
-                    <song-list-item></song-list-item>
+                    <song-list-item :song="song"></song-list-item>
                 </div>
             </div>
         </div>
@@ -44,6 +44,7 @@
 <script>
 import { SongCollections } from './tempdata/songCollections';
 import { Songs } from './tempdata/songs';
+import { SongRelationships } from './tempdata/songRelationships';
 import SongCollectionListItem from './SongCollectionListItem';
 import SongListItem from './SongListItem';
 
@@ -55,7 +56,8 @@ export default {
     data() {
         return {
             songCollections: SongCollections,
-            songs: Songs
+            songs: Songs,
+            songRelationships: SongRelationships,
         };
     },
     methods: {
@@ -70,25 +72,27 @@ export default {
             return this.songCollections.filter(collection => collection.type === "album");
         },
         albumCollectionsArePresent() {
-            return this.songCollections.filter(collection => collection.type === "album").length > 0;
+            return this.albumCollections.length > 0;
         },
         epCollections() {
             return this.songCollections.filter(collection => collection.type === "ep");
         },
         epCollectionsArePresent() {
-            return this.songCollections.filter(collection => collection.type === "ep").length > 0;
+            return this.epCollections.length > 0;
         },
         singleCollections() {
             return this.songCollections.filter(collection => collection.type === "single");
         },
         singleCollectionsArePresent() {
-            return this.songCollections.filter(collection => collection.type === "single").length > 0;
+            return this.singleCollections.length > 0;
         },
         miscSongsArePresent() {
-            return this.songs.filter(song => song.collectionId === 0).length > 0;
+            return this.miscSongs.length > 0;
         },
         miscSongs() {
-            return this.songs.filter(song => song.collectionId === 0);
+            return this.songs.filter(song => 
+                this.songRelationships.find(relationship => relationship.songId == song.id) === undefined
+            );
         }
     }
 };
