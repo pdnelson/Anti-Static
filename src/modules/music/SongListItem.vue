@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="song-item">
         <div class="song-heading">
             <div class="song-name">
                 <div v-if="collectionIsAlbumOrEp">
@@ -72,7 +72,7 @@ export default {
 </script>
 
 <style scoped>
-    .song-heading {
+    .song-item {
         margin: auto;
         width: 90%;
         padding: 20px;
@@ -85,7 +85,7 @@ export default {
         color: white;
     }
 
-    .song-heading:hover {
+    .song-item:hover {
         box-shadow: 0px 0px 8px black;
         background-color: grey;
     }
@@ -111,6 +111,19 @@ export default {
     @media screen and (max-width: 620px) {
         .song-heading {
             font-size: 10pt;
+            width: 100%;
+        }
+
+        .song-item {
+            width: 100%;
+        }
+
+        .song-name {
+            font-size: 9pt;
+        }
+
+        .song-year {
+            font-size: 9pt;
         }
     }
 </style>
