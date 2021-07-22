@@ -4,7 +4,7 @@
 
             <div v-if="projectsArePresent" class="proj-categories-mobile">
                 <v-expansion-panels dark tile>
-                    <v-expansion-panel @click="expandCategories()">
+                    <v-expansion-panel>
 
                         <v-expansion-panel-header expand-icon="expand_more">
                             Project Categories
@@ -53,7 +53,6 @@ export default {
     data() {
         return {
             categories: Categories,
-            mobileCategoriesExpanded: false,
             projects: Projects
         };
     },
