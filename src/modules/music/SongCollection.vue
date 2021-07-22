@@ -1,39 +1,45 @@
 <template>
   <div>
-      <p class="header">{{currentCollection.name}}</p>
+      <div v-if="collectionExists">
+        <p class="header">{{currentCollection.name}}</p>
 
-      <div class="dark-blob collection-container">
+        <div class="dark-blob collection-container">
 
-        <div v-if="hasArt">
-          <img :src="collectionArt.image" class="collection-art"/>
+          <div v-if="hasArt">
+            <img :src="collectionArt.image" class="collection-art"/>
+          </div>
+          
+          <div class="collection-info">
+            Year: {{currentCollection.yearCompiled}}<br/>
+            Format: {{currentCollection.format}}<br/>
+            Type: {{getType}}<br/>
+            Length: {{getLength}}<br/>
+            Number of Tracks: {{getTrackCount}}
+          </div>
         </div>
-        
-        <div class="collection-info">
-          Year: {{currentCollection.yearCompiled}}<br/>
-          Format: {{currentCollection.format}}<br/>
-          Type: {{getType}}<br/>
-          Length: {{getLength}}<br/>
-          Number of Tracks: {{getTrackCount}}
-        </div>
-      </div>
 
-      <div v-if="hasDescription">
+        <div v-if="hasDescription">
+          <div class="dark-blob">
+            <h2 class="description-heading">Description</h2>
+            {{currentCollection.description}}
+          </div>
+        </div>
+
         <div class="dark-blob">
-          <h2 class="description-heading">Description</h2>
-          {{currentCollection.description}}
+            <h2 class="description-heading">Track Listing</h2>
+            <div v-if="collectionHasSongs">
+              <div v-for="song in songsInCollection" :key="song.id">
+                  <song-list-item :song="song"></song-list-item>
+              </div>
+            </div>
+            <div v-else class="center">
+              This collection has no songs yet!
+            </div>
         </div>
       </div>
 
-      <div class="dark-blob">
-          <h2 class="description-heading">Track Listing</h2>
-          <div v-if="collectionHasSongs">
-            <div v-for="song in songsInCollection" :key="song.id">
-                <song-list-item :song="song"></song-list-item>
-            </div>
-          </div>
-          <div v-else class="center">
-            This collection has no songs yet!
-          </div>
+      <div v-else class="doesnt-exist">
+        Song collection {{$route.params.id}} does not exist!
       </div>
 
       <back-to-previous-page></back-to-previous-page>
@@ -65,6 +71,11 @@ export default {
       };
   }, 
   computed: {
+    collectionExists() {
+      let collection = this.currentCollection;
+
+      return collection !== null && collection !== undefined;
+    },
     currentCollection() {
       return this.songCollections.find(collection => collection.id == this.$route.params.id);
     },
@@ -149,6 +160,13 @@ export default {
   .description-heading {
       text-align: center;
       margin-bottom: 15px;
+  }
+
+  .doesnt-exist {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-size: 15pt;
   }
 
   @media screen and (max-width: 620px) {
