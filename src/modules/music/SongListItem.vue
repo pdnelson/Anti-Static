@@ -1,6 +1,6 @@
 <template>
-    <div class="song-item">
-        <div class="song-heading">
+    <div class="song-item" @click="showOrHideContent()">
+        <div class="song-heading" >
             <div class="song-name">
                 <div v-if="collectionIsAlbumOrEp">
                     {{song.trackNumber}}. 
@@ -17,7 +17,14 @@
             <div class="song-year">{{song.dateRecorded}}</div>
         </div>
 
-        <div class="hidden-content">
+        <div class="hidden-content" ref="hiddenContent">
+            <br/>
+            waffle cone<br/>
+            waffle cone<br/>
+            waffle cone<br/>
+            waffle cone<br/>
+            waffle cone<br/>
+            waffle cone<br/>
         </div>
     </div>
 </template>
@@ -43,6 +50,15 @@ export default {
             else {
                 return "B";
             }
+        },
+        showOrHideContent: function() {
+            let item = this.$refs.hiddenContent;
+
+            if (item.style.maxHeight){
+                item.style.maxHeight = null;
+            } else {
+                item.style.maxHeight = item.scrollHeight + "px";
+            } 
         }
     },
     computed: {
@@ -105,7 +121,10 @@ export default {
     }
 
     .hidden-content {
-        display: none;
+        max-height: 0;
+        transition: max-height 0.2s ease-out;
+        overflow: hidden;
+        padding: 0 18px;
     }
 
     @media screen and (max-width: 620px) {
