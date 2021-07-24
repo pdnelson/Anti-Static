@@ -19,7 +19,7 @@
 
         <div class="hidden-content" ref="hiddenContent">
             <br/>
-            waffle cone<br/>
+            waffle cofle cofle cofle cofle cofle cofle cofle cofle cofle cofle cofle cofle cofle cofle cofle cofle cofle cofle cofle cofle cofle cofle cofle cone<br/>
             waffle cone<br/>
             waffle cone<br/>
             waffle cone<br/>
@@ -91,7 +91,7 @@ export default {
     .song-item {
         margin: auto;
         width: 90%;
-        padding: 20px;
+        padding: 18px;
         border-radius: 25px;
         border: 1px solid white;
         margin-bottom: 10px;
@@ -106,25 +106,23 @@ export default {
         background-color: grey;
     }
 
+    .song-heading {
+        margin-top: 2px;
+    }
+
     .song-name {
-        float: left;
-        vertical-align: middle;
-        line-height: 5px;
-        opacity: 1;
+        line-height: 0px;
     }
 
     .song-year {
         float: right;
-        vertical-align: middle;
-        line-height: 5px;
-        opacity: 1;
+        line-height: 0px;
     }
 
     .hidden-content {
         max-height: 0;
         transition: max-height 0.2s ease-out;
         overflow: hidden;
-        padding: 0 18px;
     }
 
     @media screen and (max-width: 620px) {
