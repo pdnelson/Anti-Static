@@ -19,12 +19,7 @@
 
         <div class="hidden-content" ref="hiddenContent">
             <br/>
-            waffle cofle cofle cofle cofle cofle cofle cofle cofle cofle cofle cofle cofle cofle cofle cofle cofle cofle cofle cofle cofle cofle cofle cofle cone<br/>
-            waffle cone<br/>
-            waffle cone<br/>
-            waffle cone<br/>
-            waffle cone<br/>
-            waffle cone<br/>
+            <p class="song-description" ref="description"></p>
         </div>
     </div>
 </template>
@@ -38,6 +33,10 @@ export default {
         return {
             songCollections: SongCollections
         };
+    },
+    mounted() {
+        // We must process the description this way to allow easier use of HTML styling in the blob sections...
+        this.$refs.description.innerHTML = this.song.description;
     },
     props: {
         song: {
@@ -89,6 +88,7 @@ export default {
 
 <style scoped>
     .song-item {
+        text-align: left;
         margin: auto;
         width: 90%;
         padding: 18px;
@@ -123,6 +123,10 @@ export default {
         max-height: 0;
         transition: max-height 0.2s ease-out;
         overflow: hidden;
+    }
+
+    .song-description {
+        margin: 0px;
     }
 
     @media screen and (max-width: 620px) {
